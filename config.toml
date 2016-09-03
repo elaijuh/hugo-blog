@@ -1,8 +1,8 @@
-baseurl = "http://your-site-here/"
+baseurl = "http://elaijuh.github.io/"
 languageCode = "en-us"
 title = "moo..."
 theme= "hugo-theme-geppaku"
-googleAnalytics = ""
+googleAnalytics = "UA-57201547-1"
 disqusShortname = ""
 
 [author]
