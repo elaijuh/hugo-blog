@@ -1,9 +1,9 @@
 +++
-categories = [""]
+categories = ["tech"]
 date = "2014-12-16T01:28:26+08:00"
 draft = false
 slug = ""
-tags = [""]
+tags = ["nodejs"]
 title = "Handle HTTP request in multiple processes in NodeJS"
 
 +++
