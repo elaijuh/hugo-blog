@@ -1,35 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    {{ .Hugo.Generator }}
-    <link rel="shortcut icon" href="/images/favicon.ico">
-    {{ if .RSSlink }}
-    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{ else }}
-    <link href="/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="/index.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{ end }}
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <!-- google_analytics -->
-    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'en'}</script>
-    <!-- syntax highlight -->
-    <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
-    <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
-  </head>
-  <body>
-    <div id="wrap">
-      {{ template "_internal/google_analytics.html" . }}
-      <header class="site-header">
-        <div class="site-header-left">
-          <a class="site-header-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-        </div>
-      </header>
-      <div class="container">
-        <div id="main">
+<html{{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="{{ delimit .Keywords ", " }}" name="keywords">
+<meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}" property="og:title">
+<title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+{{ with .Site.Params.highlight.style }}
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/{{ . }}.min.css">
+{{ else }}
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+{{ end }}

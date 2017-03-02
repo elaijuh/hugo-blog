@@ -16,6 +16,9 @@ hugo server
 
 # generate public for deploy
 hugo 
+
 ```
+
+Copy and paste the layouts file to your layouts directory and add on it.
 
 

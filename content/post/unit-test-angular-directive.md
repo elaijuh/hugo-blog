@@ -1,6 +1,6 @@
 +++
 categories = ["tech"]
-date = "2015-06-17T01:27+08:00"
+date = "2015-06-17T01:27:00+08:00"
 draft = false
 slug = ""
 tags = ["angular1"]

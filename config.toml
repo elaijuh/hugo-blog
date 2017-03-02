@@ -1,37 +1,34 @@
 baseurl = "http://blog.hujiale.me/"
 languageCode = "en-us"
 title = "moo..."
-theme= "hugo-theme-geppaku"
+theme = "hemingway2"
 googleAnalytics = "UA-57201547-1"
 disqusShortname = "hujiale"
+description = "hujiale's 20% life and 80% tech"
+keywords = ["Web", "Program", "Philosophy"]
 
-[author]
-    # If you want to display author information set these
-    # This is Optional values
-    name = "Jiale HU"
-
-    # Please set account ids
-    # This is Optional values
-    twitter  = "hjiale"
-    linkedin = "jiale-hu-22106632"
-    github   = "elaijuh"
+[taxonomies]
+tag = "tags"
+category = "categories"
 
 [params]
-    [params.sharebutton]
-        # If you want to display share buttons set these
-        # This is Optional values
-        twitter  = true
-        facebook = true 
-        # hatena   = true # hatena is Japanese social media
-        google   = true
-        pocket   = true
-        # Please set id when you want to display facebook
-        facebookAppId = "your app id"
 
-    [params.adsense]
-        # If you want to display Google adsense set these
-        # This is Optional values
-        # 1. Create file written of the adsense tag into the directory "layouts/partials"
-        # 2. Please set file path name omitted "layouts/partials"
-        sidebar = "adsense/sidebar.html"
-        content = "adsense/content.html"
+[params.highlight]
+style = "github"
+languages = ["typescript", "go", "dockerfile", "yaml"]
+
+[[params.social]]
+url = "https://github.com/elaijuh"
+fa_icon = "fa-github"
+
+[[params.social]]
+url = "https://twitter.com/hjiale"
+fa_icon = "fa-twitter"
+
+[[params.social]]
+url = "https://www.linkedin.com/in/jiale-hu-22106632/"
+fa_icon = "fa-linkedin"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"
