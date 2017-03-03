@@ -1,4 +1,4 @@
-baseurl = "http://blog.hujiale.me/"
+baseurl = "https://blog.hujiale.me/"
 languageCode = "en-us"
 title = "moo..."
 theme = "hemingway2"
