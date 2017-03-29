@@ -15,7 +15,7 @@ hugo new post/foo
 hugo server
 
 # generate public for deploy
-hugo 
+hugo
 
 ```
 
