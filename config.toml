@@ -1,6 +1,6 @@
 baseurl = "https://blog.hujiale.me/"
 languageCode = "en-us"
-title = "be stateless"
+title = "{be stateless}"
 theme = "hemingway2"
 googleAnalytics = "UA-57201547-1"
 disqusShortname = "hujiale"
